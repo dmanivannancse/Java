@@ -26,9 +26,9 @@ public class MapSample {
         //Inside its using structure like doubly linked list. 
         //linked list having addtional two nodes previous and next to maintain insertion oder. 
 
-        Map<Integer, Integer> treeMap = new TreeMap<>();// maintain insertion order. Sorted Keys by Natural Order. Not ThreadSafe.
+        Map<Integer, Integer> treeMap = new TreeMap<>();// doesn't maintain insertion order. Sorted Keys by Natural Order. Not ThreadSafe.
         IntStream.rangeClosed(1, 100).forEach(e -> treeMap.put(e, e));
-        System.out.println("TreeMap: "+ treeMap.keySet()+",\n"+ treeMap.values());
+        System.out.println("TreeMap: "+ treeMap.keySet());
         /// Its implemented using RedBlack Tree. Its a self balancing BST. 
         // Self Balancing is nothing but whenever any actions happens, tree will be restructred based on the updated values again. 
 
